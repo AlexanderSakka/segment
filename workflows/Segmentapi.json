@@ -1,7 +1,313 @@
 {
-  "70": {
+  "6": {
     "inputs": {
-      "image": "white-1000x1000.webp",
+      "text": [
+        "173",
+        0
+      ],
+      "clip": [
+        "163",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "163",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "13": {
+    "inputs": {
+      "noise": [
+        "48",
+        0
+      ],
+      "guider": [
+        "22",
+        0
+      ],
+      "sampler": [
+        "109",
+        0
+      ],
+      "sigmas": [
+        "17",
+        0
+      ],
+      "latent_image": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "17": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 28,
+      "denoise": 1,
+      "model": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "BasicScheduler"
+    }
+  },
+  "22": {
+    "inputs": {
+      "model": [
+        "55",
+        0
+      ],
+      "conditioning": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "BasicGuider"
+    }
+  },
+  "38": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "163",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "41": {
+    "inputs": {
+      "pixels": [
+        "165",
+        0
+      ],
+      "vae": [
+        "163",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "45": {
+    "inputs": {
+      "noise": [
+        "50",
+        0
+      ],
+      "guider": [
+        "46",
+        0
+      ],
+      "sampler": [
+        "108",
+        0
+      ],
+      "sigmas": [
+        "51",
+        0
+      ],
+      "latent_image": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "SamplerCustomAdvanced"
+    }
+  },
+  "46": {
+    "inputs": {
+      "model": [
+        "52",
+        0
+      ],
+      "conditioning": [
+        "60",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "BasicGuider"
+    }
+  },
+  "48": {
+    "inputs": {},
+    "class_type": "DisableNoise",
+    "_meta": {
+      "title": "DisableNoise"
+    }
+  },
+  "49": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 28,
+      "denoise": 1,
+      "model": [
+        "439",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "BasicScheduler"
+    }
+  },
+  "50": {
+    "inputs": {},
+    "class_type": "DisableNoise",
+    "_meta": {
+      "title": "DisableNoise"
+    }
+  },
+  "51": {
+    "inputs": {
+      "sigmas": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "FlipSigmas",
+    "_meta": {
+      "title": "FlipSigmas"
+    }
+  },
+  "52": {
+    "inputs": {
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": [
+        "166",
+        0
+      ],
+      "height": [
+        "166",
+        1
+      ],
+      "model": [
+        "439",
+        0
+      ]
+    },
+    "class_type": "InFluxModelSamplingPred",
+    "_meta": {
+      "title": "Inverse Flux Model Pred"
+    }
+  },
+  "55": {
+    "inputs": {
+      "max_shift": 1.15,
+      "base_shift": 0.5,
+      "width": [
+        "166",
+        0
+      ],
+      "height": [
+        "166",
+        1
+      ],
+      "reverse_ode": true,
+      "model": [
+        "235",
+        0
+      ]
+    },
+    "class_type": "OutFluxModelSamplingPred",
+    "_meta": {
+      "title": "Outverse Flux Model Pred"
+    }
+  },
+  "60": {
+    "inputs": {
+      "guidance": 0,
+      "conditioning": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "FluxDeGuidance",
+    "_meta": {
+      "title": "Flux DeGuidance"
+    }
+  },
+  "62": {
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "FluxDeGuidance",
+    "_meta": {
+      "title": "Flux DeGuidance"
+    }
+  },
+  "108": {
+    "inputs": {
+      "gamma": 0.1,
+      "seed": 44
+    },
+    "class_type": "FluxForwardODESampler",
+    "_meta": {
+      "title": "Flux Forward ODE Sampler"
+    }
+  },
+  "109": {
+    "inputs": {
+      "eta": 0.5,
+      "start_step": 0,
+      "end_step": 6,
+      "eta_trend": "linear_decrease",
+      "model": [
+        "55",
+        0
+      ],
+      "latent_image": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "FluxReverseODESampler",
+    "_meta": {
+      "title": "Flux Reverse ODE Sampler"
+    }
+  },
+  "131": {
+    "inputs": {
+      "image": "7.jpg",
       "upload": "image"
     },
     "class_type": "LoadImage",
@@ -9,51 +315,623 @@
       "title": "Load Image"
     }
   },
-  "85": {
+  "163": {
     "inputs": {
-      "model_name": "sam_vit_h (2.56GB)"
+      "ckpt_name": "flux1-dev-fp8.safetensors"
     },
-    "class_type": "SAMModelLoader (segment anything)",
+    "class_type": "CheckpointLoaderSimple",
     "_meta": {
-      "title": "SAMModelLoader (segment anything)"
+      "title": "Load Checkpoint"
     }
   },
-  "86": {
+  "165": {
     "inputs": {
-      "prompt": "shirt",
-      "threshold": 0.3,
-      "sam_model": [
-        "85",
+      "megapixels": 1,
+      "images": [
+        "338",
         0
       ],
-      "grounding_dino_model": [
-        "87",
-        0
-      ],
-      "image": [
-        "70",
+      "upscale_model_opt": [
+        "167",
         0
       ]
     },
-    "class_type": "GroundingDinoSAMSegment (segment anything)",
+    "class_type": "ImageScaleToMegapixels",
     "_meta": {
-      "title": "GroundingDinoSAMSegment (segment anything)"
+      "title": "Scale To Megapixels"
     }
   },
-  "87": {
+  "166": {
     "inputs": {
-      "model_name": "GroundingDINO_SwinT_OGC (694MB)"
+      "image": [
+        "165",
+        0
+      ]
     },
-    "class_type": "GroundingDinoModelLoader (segment anything)",
+    "class_type": "GetImageSize+",
     "_meta": {
-      "title": "GroundingDinoModelLoader (segment anything)"
+      "title": "🔧 Get Image Size"
     }
   },
-  "118": {
+  "167": {
+    "inputs": {
+      "model_name": "RealESRGAN_x2.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "169": {
+    "inputs": {
+      "delimiter": ", ",
+      "clean_whitespace": "true",
+      "text_a": [
+        "442",
+        0
+      ],
+      "text_b": [
+        "171",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "171": {
+    "inputs": {
+      "model": "gemini-1.5-flash",
+      "max_output_tokens": 4096,
+      "temperature": 0.5,
+      "words_limit": 300,
+      "response_language": "en",
+      "system_prompt": "",
+      "user_prompt": "Ignore the artistic style of the picture. Please describe the characters' standing position, ethnicity, hairstyle, hair color, facial expression, physical and facial features, the position of arms and hands and body parts, clothing pieces, clothing material and color and orientation, and the scene in detail in a passage.",
+      "image_1": [
+        "165",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: Gemini",
+    "_meta": {
+      "title": "LayerUtility: Gemini(Advance)"
+    }
+  },
+  "173": {
+    "inputs": {
+      "text": [
+        "169",
+        0
+      ],
+      "text2": "In the style of PIX4R, The image shows a young couple standing close together, seemingly taking a selfie.  The woman, of likely Hispanic or Latina ethnicity, has long, straight dark brown hair that falls past her shoulders. Her facial expression is one of happiness and contentment, with a bright, genuine smile revealing her white teeth. Her skin tone is medium brown, and her facial features are soft and delicate. She is wearing a horizontally striped shirt with navy blue and off-white stripes, made of a soft, likely cotton material. Her arms are relaxed at her sides, and her body is slightly angled towards the man.\n\nThe man, appearing to be of mixed ethnicity, possibly Hispanic or Latino, has short, curly dark brown hair.  He has a broad smile, mirroring the woman's joyful expression. His skin tone is slightly lighter than the woman's. He has a strong jawline and well-defined features. He's wearing a long-sleeved shirt with a color-blocked design: navy blue at the shoulders and a mustard yellow on the lower half of the shirt, likely made of a knit material. His arms are around the woman, his left arm is wrapped around her shoulders, and his right arm is extended, holding a device to take the picture.  Their bodies are positioned close, conveying intimacy and affection. The background is blurred but suggests an urban setting, possibly a city street with buildings visible in the distance."
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "235": {
+    "inputs": {
+      "lora_name": "PIXAR_4.0.safetensors",
+      "strength_model": 1.2,
+      "model": [
+        "445",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
+    }
+  },
+  "338": {
+    "inputs": {
+      "brightness": 1,
+      "contrast": 1,
+      "saturation": 1.2,
+      "image": [
+        "131",
+        0
+      ]
+    },
+    "class_type": "LayerColor: BrightnessContrastV2",
+    "_meta": {
+      "title": "LayerColor: Brightness Contrast V2"
+    }
+  },
+  "438": {
+    "inputs": {
+      "model": [
+        "163",
+        0
+      ]
+    },
+    "class_type": "FluxForwardOverrider",
+    "_meta": {
+      "title": "FluxForwardOverrider"
+    }
+  },
+  "439": {
+    "inputs": {
+      "residual_diff_threshold": 0.12,
+      "model": [
+        "438",
+        0
+      ]
+    },
+    "class_type": "ApplyFirstBlockCachePatch",
+    "_meta": {
+      "title": "ApplyFirstBlockCachePatch"
+    }
+  },
+  "442": {
+    "inputs": {
+      "text": "In the style of PIX4R",
+      "text_b": "",
+      "text_c": "",
+      "text_d": ""
+    },
+    "class_type": "Text String",
+    "_meta": {
+      "title": "Text String"
+    }
+  },
+  "444": {
+    "inputs": {
+      "provider": "CUDA"
+    },
+    "class_type": "PulidFluxInsightFaceLoader",
+    "_meta": {
+      "title": "Load InsightFace (PuLID Flux)"
+    }
+  },
+  "445": {
+    "inputs": {
+      "rel_l1_thresh": 0.4,
+      "cache_device": "offload_device",
+      "wan_coefficients": "disabled",
+      "model": [
+        "446",
+        0
+      ]
+    },
+    "class_type": "ApplyTeaCachePatch",
+    "_meta": {
+      "title": "ApplyTeaCachePatch"
+    }
+  },
+  "446": {
+    "inputs": {
+      "model": [
+        "463",
+        0
+      ]
+    },
+    "class_type": "FluxForwardOverrider",
+    "_meta": {
+      "title": "FluxForwardOverrider"
+    }
+  },
+  "447": {
+    "inputs": {
+      "weight": 0.9,
+      "start_at": 0.3,
+      "end_at": 1,
+      "model": [
+        "163",
+        0
+      ],
+      "pulid_flux": [
+        "464",
+        0
+      ],
+      "eva_clip": [
+        "461",
+        0
+      ],
+      "face_analysis": [
+        "444",
+        0
+      ],
+      "image": [
+        "502",
+        0
+      ],
+      "attn_mask": [
+        "448",
+        0
+      ]
+    },
+    "class_type": "ApplyPulidFlux",
+    "_meta": {
+      "title": "Apply PuLID Flux"
+    }
+  },
+  "448": {
+    "inputs": {
+      "text": "female,women",
+      "image": [
+        "165",
+        0
+      ],
+      "clipseg_model": [
+        "451",
+        0
+      ]
+    },
+    "class_type": "CLIPSeg Masking",
+    "_meta": {
+      "title": "CLIPSeg Masking"
+    }
+  },
+  "449": {
+    "inputs": {
+      "mask": [
+        "448",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "InvertMask"
+    }
+  },
+  "450": {
+    "inputs": {
+      "mask_opacity": 1,
+      "mask_color": "0, 0, 0",
+      "pass_through": true,
+      "image": [
+        "165",
+        0
+      ],
+      "mask": [
+        "449",
+        0
+      ]
+    },
+    "class_type": "ImageAndMaskPreview",
+    "_meta": {
+      "title": "ImageAndMaskPreview"
+    }
+  },
+  "451": {
+    "inputs": {
+      "model": "CIDAS/clipseg-rd64-refined"
+    },
+    "class_type": "CLIPSeg Model Loader",
+    "_meta": {
+      "title": "CLIPSeg Model Loader"
+    }
+  },
+  "453": {
+    "inputs": {
+      "mask": [
+        "454",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "InvertMask"
+    }
+  },
+  "454": {
+    "inputs": {
+      "text": "male,men",
+      "image": [
+        "165",
+        0
+      ],
+      "clipseg_model": [
+        "451",
+        0
+      ]
+    },
+    "class_type": "CLIPSeg Masking",
+    "_meta": {
+      "title": "CLIPSeg Masking"
+    }
+  },
+  "455": {
+    "inputs": {
+      "mask_opacity": 1,
+      "mask_color": "0, 0, 0",
+      "pass_through": true,
+      "image": [
+        "165",
+        0
+      ],
+      "mask": [
+        "453",
+        0
+      ]
+    },
+    "class_type": "ImageAndMaskPreview",
+    "_meta": {
+      "title": "ImageAndMaskPreview"
+    }
+  },
+  "461": {
+    "inputs": {},
+    "class_type": "PulidFluxEvaClipLoader",
+    "_meta": {
+      "title": "Load Eva Clip (PuLID Flux)"
+    }
+  },
+  "463": {
+    "inputs": {
+      "weight": 0.9,
+      "start_at": 0.3,
+      "end_at": 1,
+      "model": [
+        "447",
+        0
+      ],
+      "pulid_flux": [
+        "464",
+        0
+      ],
+      "eva_clip": [
+        "461",
+        0
+      ],
+      "face_analysis": [
+        "444",
+        0
+      ],
+      "image": [
+        "504",
+        0
+      ],
+      "attn_mask": [
+        "454",
+        0
+      ]
+    },
+    "class_type": "ApplyPulidFlux",
+    "_meta": {
+      "title": "Apply PuLID Flux"
+    }
+  },
+  "464": {
+    "inputs": {
+      "pulid_file": "pulid_flux_v0.9.1.safetensors"
+    },
+    "class_type": "PulidFluxModelLoader",
+    "_meta": {
+      "title": "Load PuLID Flux Model"
+    }
+  },
+  "475": {
+    "inputs": {
+      "guide_size": 512,
+      "guide_size_for": true,
+      "max_size": 1024,
+      "seed": 307324689922419,
+      "steps": 8,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 0.5,
+      "feather": 5,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.5,
+      "bbox_dilation": 10,
+      "bbox_crop_factor": 3,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 0,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 20,
+      "tiled_decode": false,
+      "image": [
+        "485",
+        0
+      ],
+      "model": [
+        "235",
+        0
+      ],
+      "clip": [
+        "163",
+        1
+      ],
+      "vae": [
+        "163",
+        2
+      ],
+      "positive": [
+        "62",
+        0
+      ],
+      "negative": [
+        "476",
+        0
+      ],
+      "bbox_detector": [
+        "477",
+        0
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "FaceDetailer"
+    }
+  },
+  "476": {
+    "inputs": {
+      "conditioning": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "477": {
+    "inputs": {
+      "model_name": "bbox/face_yolov8m.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    }
+  },
+  "485": {
+    "inputs": {
+      "upscale_model": [
+        "486",
+        0
+      ],
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
+  },
+  "486": {
+    "inputs": {
+      "model_name": "RealESRGAN_x2.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "490": {
+    "inputs": {
+      "megapixels": 2,
+      "images": [
+        "8",
+        0
+      ],
+      "upscale_model_opt": [
+        "486",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToMegapixels",
+    "_meta": {
+      "title": "Scale To Megapixels"
+    }
+  },
+  "499": {
+    "inputs": {
+      "text": "face",
+      "image": [
+        "450",
+        0
+      ],
+      "clipseg_model": [
+        "451",
+        0
+      ]
+    },
+    "class_type": "CLIPSeg Masking",
+    "_meta": {
+      "title": "CLIPSeg Masking"
+    }
+  },
+  "500": {
+    "inputs": {
+      "text": "face",
+      "image": [
+        "455",
+        0
+      ],
+      "clipseg_model": [
+        "451",
+        0
+      ]
+    },
+    "class_type": "CLIPSeg Masking",
+    "_meta": {
+      "title": "CLIPSeg Masking"
+    }
+  },
+  "501": {
+    "inputs": {
+      "mask": [
+        "499",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "InvertMask"
+    }
+  },
+  "502": {
+    "inputs": {
+      "mask_opacity": 1,
+      "mask_color": "0, 0, 0",
+      "pass_through": true,
+      "image": [
+        "450",
+        0
+      ],
+      "mask": [
+        "501",
+        0
+      ]
+    },
+    "class_type": "ImageAndMaskPreview",
+    "_meta": {
+      "title": "ImageAndMaskPreview"
+    }
+  },
+  "503": {
+    "inputs": {
+      "mask": [
+        "500",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "InvertMask"
+    }
+  },
+  "504": {
+    "inputs": {
+      "mask_opacity": 1,
+      "mask_color": "0, 0, 0",
+      "pass_through": true,
+      "image": [
+        "455",
+        0
+      ],
+      "mask": [
+        "503",
+        0
+      ]
+    },
+    "class_type": "ImageAndMaskPreview",
+    "_meta": {
+      "title": "ImageAndMaskPreview"
+    }
+  },
+  "540": {
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "86",
+        "475",
         0
       ]
     },
